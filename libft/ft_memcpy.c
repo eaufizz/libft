@@ -6,11 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 16:08:37 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/20 16:04:21 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/23 21:57:02 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 {
@@ -33,7 +33,6 @@ void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 	return buf1;
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 // 	char	buf[] = "";

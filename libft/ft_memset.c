@@ -6,11 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:13:05 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/18 14:15:43 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/23 21:57:21 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -26,8 +26,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {

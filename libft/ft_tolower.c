@@ -6,9 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:23:22 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/18 14:15:53 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/23 22:02:07 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -17,7 +19,6 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 // 	char	c1;

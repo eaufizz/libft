@@ -6,9 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 21:05:16 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/18 17:34:01 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/23 21:55:58 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -17,8 +19,6 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {

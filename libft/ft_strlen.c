@@ -6,11 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 21:40:59 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/18 14:15:59 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/23 22:00:52 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -22,7 +22,6 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-// #include <stdio.h>
 // #include <string.h>
 // int	main(void)
 // {

@@ -6,11 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 15:13:50 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/18 14:15:23 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/23 21:55:28 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {
@@ -25,8 +25,6 @@ void ft_bzero(void *s, size_t n)
 		i ++;
 	}
 }
-
-// #include<stdio.h>
 
 // int main(void)
 // {

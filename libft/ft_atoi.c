@@ -6,22 +6,13 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:56:38 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/17 15:36:14 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/25 17:21:50 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
+#include "libft.h"
 
-// int	ft_atoi(char *str);
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_atoi("   ----+123d858"));
-// 	printf("%d\n", ft_atoi("+++- --45678hj"));
-// 	return (0);
-// }
-
-int	minuscheck(char *str, int *i)
+int	minuscheck(const char *str, int *i)
 {
 	int	minus;
 
@@ -38,10 +29,10 @@ int	minuscheck(char *str, int *i)
 		return (1);
 }
 
-int	nbrread(char *str, int i)
+long	nbrread(const char *str, int i)
 {
 	int	j;
-	int	result;
+	long	result;
 
 	j = 0;
 	result = 0;
@@ -54,16 +45,23 @@ int	nbrread(char *str, int i)
 	return (result);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	minus;
-	int	result;
+	long	result;
 
 	i = 0;
 	while (str[i] == ' ')
 		i++;
 	minus = minuscheck(str, &i);
 	result = nbrread(str, i) * minus;
-	return (result);
+	return (int)(result);
 }
+
+// int	main(void)
+// {
+// 	printf("%d\n", ft_atoi("   ----+123d858"));
+// 	printf("%d\n", ft_atoi("+++- --45678hj"));
+// 	return (0);
+// }
