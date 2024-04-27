@@ -6,38 +6,53 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:56:38 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/25 17:21:50 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/27 16:47:09 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	minuscheck(const char *str, int *i)
+static int					space_minus_zerocheck(const char *str, int *i);
+static unsigned long long	nbrread(const char *str, int i, int *minus);
+
+static int	space_minus_zerocheck(const char *str, int *i)
 {
 	int	minus;
 
 	minus = 2;
+	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\n'
+		|| str[*i] == '\v' || str[*i] == '\f' || str[*i] == '\r')
+		*i += 1;
 	while (str[*i] == '+' || str[*i] == '-')
 	{
 		if (str[*i] == '-')
 			minus++;
 		*i += 1;
 	}
+	while (str[*i] == '0')
+		*i += 1;
 	if (minus % 2 == 1)
 		return (-1);
 	else
 		return (1);
 }
 
-long	nbrread(const char *str, int i)
+static unsigned long long	nbrread(const char *str, int i, int *minus)
 {
-	int	j;
-	long	result;
+	int				j;
+	unsigned long	result;
 
 	j = 0;
 	result = 0;
-	while ('0' <= str[i] && str[i] <= '9' && j < 10)
+	while ('0' <= str[i] && str[i] <= '9')
 	{
+		if ((result > (unsigned long)LONG_MAX / 10 || result
+				* 10 > (unsigned long)LONG_MAX - (str[i] - '0')) && *minus == 1)
+			return (LONG_MAX);
+		if ((result > (unsigned long)LONG_MAX + 1 / 10 || result
+				* 10 > (unsigned long)LONG_MAX + 1 - (str[i] - '0'))
+			&& *minus == -1)
+			return (LONG_MIN);
 		result = result * 10 + (str[i] - '0');
 		i += 1;
 		j++;
@@ -47,21 +62,22 @@ long	nbrread(const char *str, int i)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	minus;
-	long	result;
+	int					i;
+	int					minus;
+	unsigned long long	result;
 
 	i = 0;
 	while (str[i] == ' ')
 		i++;
-	minus = minuscheck(str, &i);
-	result = nbrread(str, i) * minus;
+	minus = space_minus_zerocheck(str, &i);
+	result = nbrread(str, i, &minus) * minus;
 	return (int)(result);
 }
 
 // int	main(void)
 // {
-// 	printf("%d\n", ft_atoi("   ----+123d858"));
-// 	printf("%d\n", ft_atoi("+++- --45678hj"));
+// 	printf("本家　%d\n", atoi("  "));
+// 	printf("FT　%d\n", ft_atoi("  "));
+
 // 	return (0);
 // }

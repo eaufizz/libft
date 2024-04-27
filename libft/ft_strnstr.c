@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 16:22:44 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/25 23:05:59 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/26 22:06:44 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	n_len = ft_strlen(needle);
 	if (needle[0] == '\0')
 		return (hay);
-	while (hay[i] != '\0' && i < len)
+	while (i < len)
 	{
 		c = 0;
 		while (hay[i + c] != '\0' && needle[c] != '\0' && hay[i

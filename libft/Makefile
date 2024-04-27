@@ -23,15 +23,16 @@ SOURCE = \
 		ft_strnstr.c\
 		ft_atoi.c\
 		ft_calloc.c\
-		ft_strdup.c
+		ft_strdup.c\
+		ft_substr.c
 CC = cc -Wall -Wextra -Werror
 all: $(NAME)
-$(NAME):$(SOURCE:%.c=%.o)
-	ar rcs $(NAME) $(SOURCE:%.c=%.o)
+$(NAME):$(SOURCE:.c=.o)
+	ar rcs $(NAME) $(SOURCE:.c=.o)
 $(SOURCE:%.c=%.o):$(SOURCE)
 	$(CC) -c $(SOURCE)
 clean:
-	rm -f $(SOURCE:%.c=%.o)
+	rm -f $(SOURCE:.c=.o)
 fclean:clean
 	rm -f $(NAME)
 re:fclean all

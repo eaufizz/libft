@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 14:50:49 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/25 22:25:58 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/27 17:47:59 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 
 	i = 0;
 	if(dstsize == 0)
-	{
 		return (ft_strlen(src));
-	}
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	if (dest_len >= dstsize)

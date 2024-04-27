@@ -6,13 +6,15 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 21:36:24 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/25 23:23:34 by sreo             ###   ########.fr       */
+/*   Updated: 2024/04/27 21:52:27 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <limits.h>
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 
@@ -37,6 +39,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
-void	*ft_calloc(size_t n, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
