@@ -1,9 +1,5 @@
 #!/bin/bash
-cd ../libft-unit-tests
-make f
-cd ../libft
+make  -C ../libft-unit-tests f
 make fclean
-cd libft-tester-tokyo
-make all
-cd ..
+make -C libft-tester-tokyo all
 make fclean

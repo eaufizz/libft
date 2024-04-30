@@ -24,12 +24,14 @@ SOURCE = \
 		ft_atoi.c\
 		ft_calloc.c\
 		ft_strdup.c\
-		ft_substr.c
+		ft_substr.c\
+		ft_strjoin.c\
+		ft_strtrim.c
 CC = cc -Wall -Wextra -Werror
 all: $(NAME)
 $(NAME):$(SOURCE:.c=.o)
 	ar rcs $(NAME) $(SOURCE:.c=.o)
-$(SOURCE:%.c=%.o):$(SOURCE)
+$(SOURCE:.c=.o):$(SOURCE)
 	$(CC) -c $(SOURCE)
 clean:
 	rm -f $(SOURCE:.c=.o)
