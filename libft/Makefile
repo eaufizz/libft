@@ -26,7 +26,9 @@ SOURCE = \
 		ft_strdup.c\
 		ft_substr.c\
 		ft_strjoin.c\
-		ft_strtrim.c
+		ft_strtrim.c\
+		ft_split.c\
+		ft_itoa.c
 CC = cc -Wall -Wextra -Werror
 all: $(NAME)
 $(NAME):$(SOURCE:.c=.o)
