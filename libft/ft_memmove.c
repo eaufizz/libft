@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:28:40 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/23 21:57:13 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:24:06 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 			p[i] = c[i];
 	return (buf1);
 }
-
-// int	main(void)
-// {
-// 	char	buf[] = "ABCDEFG";
-
-// 	ft_memmove(buf + 2, NULL, 0);
-// 	printf("コピー後のbuf文字列→%s\n", buf);
-// 	return (0);
-// }

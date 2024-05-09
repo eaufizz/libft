@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 13:04:20 by sreo              #+#    #+#             */
-/*   Updated: 2024/05/09 13:04:31 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 15:43:25 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	len;
-
-	len = ft_strlen(s);
-	write(fd, &s, len);
+	write(fd, s, ft_strlen(s));
 }

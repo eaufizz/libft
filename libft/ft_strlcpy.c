@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:47:04 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/25 21:03:42 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:24:55 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,25 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-
-// #include <string.h>
-
-// int main (void)
-// {
-// 	char str1[7] = "abcdef";
-// 	char str2[10];
-
-// 	strlcpy(str2, str1, 10);
-// 	printf("%s\n", str2);
-// 	return (0);
-// }
-
-// int	main(void)
-// {
-// 	char	str1[7] = "abcdef";
-// 	char	str2[10];
-
-// 	ft_strlcpy(str2, str1, 10);
-// 	printf("%s\n", str2);
-// 	return (0);
-// }

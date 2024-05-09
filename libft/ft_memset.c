@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:13:05 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/23 21:57:21 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:35:58 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
-	unsigned char *p;
+	size_t			i;
+	unsigned char	*p;
 
 	i = 0;
 	p = (unsigned char *)s;
@@ -26,13 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-// int	main(void)
-// {
-// 	char	str[5] = "abcd";
-
-// 	printf("before\n%s\n\n", str);
-// 	ft_memset(str, 'Z', 2);
-// 	printf("after\n%s\n", str);
-// 	return (0);
-// }

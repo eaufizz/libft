@@ -6,14 +6,11 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:56:38 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/27 16:47:09 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:49:05 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int					space_minus_zerocheck(const char *str, int *i);
-static unsigned long long	nbrread(const char *str, int i, int *minus);
 
 static int	space_minus_zerocheck(const char *str, int *i)
 {
@@ -23,7 +20,7 @@ static int	space_minus_zerocheck(const char *str, int *i)
 	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\n'
 		|| str[*i] == '\v' || str[*i] == '\f' || str[*i] == '\r')
 		*i += 1;
-	while (str[*i] == '+' || str[*i] == '-')
+	if (str[*i] == '+' || str[*i] == '-')
 	{
 		if (str[*i] == '-')
 			minus++;
@@ -71,13 +68,5 @@ int	ft_atoi(const char *str)
 		i++;
 	minus = space_minus_zerocheck(str, &i);
 	result = nbrread(str, i, &minus) * minus;
-	return (int)(result);
+	return (result);
 }
-
-// int	main(void)
-// {
-// 	printf("本家　%d\n", atoi("  "));
-// 	printf("FT　%d\n", ft_atoi("  "));
-
-// 	return (0);
-// }

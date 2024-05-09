@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 14:15:20 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/23 22:02:15 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:25:25 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-// int	main(void)
-// {
-// 	char	c1;
-// 	char	c2;
-
-// 	c1 = 'd';
-// 	c2 = 'R';
-// 	printf("%c\n", ft_toupper(c1));
-// 	printf("%c\n", ft_toupper(c2));
-// 	return (0);
-// }

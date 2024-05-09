@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:08:44 by sreo              #+#    #+#             */
-/*   Updated: 2024/05/03 18:27:25 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:24:25 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	charcount(char const *s, char c)
 	int	i;
 
 	i = 0;
-	while (s[i] != c)
+	while (s[i] != c && s[i])
 		i++;
 	i++;
 	return (i);
@@ -68,14 +68,27 @@ static int	stringset(char **strs, char const *s, char c)
 		strs[i][j] = '\0';
 		i++;
 	}
+	strs[i] = NULL;
 	return (0);
+}
+
+static void	allfree(char **strs)
+{
+	int	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		free(strs[i]);
+		i++;
+	}
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	int judge;
-	
+	int		judge;
+
 	judge = 0;
 	strs = (char **)malloc(sizeof(char *) * stringcount(s, c));
 	if (strs == NULL)
@@ -83,27 +96,8 @@ char	**ft_split(char const *s, char c)
 	judge = stringset(strs, s, c);
 	if (judge)
 	{
-		free(strs);
+		allfree(strs);
 		return (NULL);
 	}
 	return (strs);
 }
-
-// int main(void)
-// {
-// 	int i;
-// 	char **result;
-// 	char const s[30] = "hello,world,42,tokyo";
-// 	char c = ',';
-// 	i = 0;
-// 	result = ft_split(s, c);
-// 	printf("%d\n", stringcount(s, c));
-// 	printf("%d\n", charcount(s, c));
-// 	while(i < stringcount(s, c) - 1)
-// 	{
-// 		printf("%s\n", result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// 	return 0;
-// }

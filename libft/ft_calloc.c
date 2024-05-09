@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 20:57:41 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/27 21:30:43 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:38:16 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 		count = 1;
 	}
 	if (SIZE_MAX / count < size)
-        return (NULL);
+		return (NULL);
 	p = malloc(count * size);
 	if (!p)
 		return (NULL);

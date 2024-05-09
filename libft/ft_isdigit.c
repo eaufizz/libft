@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:53:41 by sreo              #+#    #+#             */
-/*   Updated: 2024/04/23 21:56:11 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/09 16:23:39 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	data;
-// 	data = ft_isdigit('3');
-// 	printf("%d\n", data);
-// 	return (0);
-// }
