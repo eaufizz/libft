@@ -6,7 +6,7 @@
 /*   By: sreo <sreo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 13:08:44 by sreo              #+#    #+#             */
-/*   Updated: 2024/05/09 16:24:25 by sreo             ###   ########.fr       */
+/*   Updated: 2024/05/10 16:28:13 by sreo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ char	**ft_split(char const *s, char c)
 	if (judge)
 	{
 		allfree(strs);
+		free(strs);
 		return (NULL);
 	}
 	return (strs);
